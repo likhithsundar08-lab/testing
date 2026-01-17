@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stunning Frontend</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: rgba(255,255,255,0.08);
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #1e293b, var(--bg));
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 90%;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      animation: slideIn 1s ease forwards;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .hero button {
+      padding: 0.9rem 2.2rem;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), #22d3ee);
+      color: #020617;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px rgba(56,189,248,0.4);
+    }
+
+    .card {
+      background: var(--card);
+      backdrop-filter: blur(20px);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .card h2 {
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.06);
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .stat h3 {
+      font-size: 1.6rem;
+      color: #22d3ee;
+    }
+
+    .stat p {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1>Create <span>Stunning</span><br>Web Experiences</h1>
+      <p>
+        A modern, glassmorphism-inspired frontend built using pure HTML and CSS.
+        Clean. Fast. Beautiful.
+      </p>
+      <button>Get Started</button>
+    </div>
+
+    <div class="card">
+      <h2>Why This Design?</h2>
+      <p>
+        This layout uses gradients, glass effects, smooth animations,
+        and responsive design principles to look premium and professional.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <h3>⚡</h3>
+          <p>Fast</p>
+        </div>
+        <div class="stat">
+          <h3>🎨</h3>
+          <p>Modern</p>
+        </div>
+        <div class="stat">
+          <h3>📱</h3>
+          <p>Responsive</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
